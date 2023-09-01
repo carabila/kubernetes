@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dreambox-deployment
+  namespace: media
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dreambox
+  template:
+    metadata:
+      labels:
+        app: dreambox
+    spec:
+      containers:
+      - name: dreambox
+        image: carabila/dreambox-streamer
+        ports:
+        - containerPort: 3000
