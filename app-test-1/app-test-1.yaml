@@ -121,7 +121,7 @@ metadata:
 spec:
   secretName: app-test-1-tls-secret
   issuerRef:
-    name: ssl-issuer
+    name: acme-issuer
     kind: ClusterIssuer
   dnsNames:
     - nginx.cloud.carabillo.eu
